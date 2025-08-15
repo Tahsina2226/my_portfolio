@@ -1,7 +1,13 @@
-import React, { FC } from "react";
+import type { FC } from "react";
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiExpress, SiPostman } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiExpress,
+  SiPostman,
+} from "react-icons/si";
 import { DiJavascript } from "react-icons/di";
 
 const Education: FC = () => {
@@ -47,7 +53,8 @@ const Education: FC = () => {
             Educational Qualification
           </h2>
           <p className="mx-auto max-w-2xl text-gray-200 text-lg">
-            My academic journey and the skills I'm developing alongside my studies
+            My academic journey and the skills I'm developing alongside my
+            studies
           </p>
         </motion.div>
 
@@ -76,24 +83,41 @@ const Education: FC = () => {
           </motion.div>
 
           <div className="z-10 relative space-y-6">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
               className="text-gray-100 text-lg"
             >
-              I am currently pursuing a <span className="font-semibold text-amber-400">Bachelor's degree in Computer Science and Engineering (CSE)</span> at Premier University. Alongside my studies, I am actively exploring web development.
+              I am currently pursuing a{" "}
+              <span className="font-semibold text-amber-400">
+                Bachelor's degree in Computer Science and Engineering (CSE)
+              </span>{" "}
+              at Premier University. Alongside my studies, I am actively
+              exploring web development.
             </motion.p>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
               viewport={{ once: true }}
               className="text-gray-100 text-lg"
             >
-              During my coursework, I have gained a solid foundation in <span className="font-semibold text-teal-400">data structures, algorithms, and system design</span>, and have worked on projects using <span className="font-semibold text-purple-400">React.js, Node.js, Express.js</span>, as well as modern frontend tools like <span className="font-semibold text-amber-400">Tailwind CSS and JavaScript (ES6+)</span>.
+              During my coursework, I have gained a solid foundation in{" "}
+              <span className="font-semibold text-teal-400">
+                data structures, algorithms, and system design
+              </span>
+              , and have worked on projects using{" "}
+              <span className="font-semibold text-purple-400">
+                React.js, Node.js, Express.js
+              </span>
+              , as well as modern frontend tools like{" "}
+              <span className="font-semibold text-amber-400">
+                Tailwind CSS and JavaScript (ES6+)
+              </span>
+              .
             </motion.p>
           </div>
         </motion.div>
@@ -114,7 +138,7 @@ const Education: FC = () => {
             <h3 className="bg-clip-text bg-gradient-to-r from-teal-400 to-teal-300 mb-6 font-bold text-transparent text-2xl">
               What I'm Comfortable With
             </h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-teal-500/10 mr-4 p-2 rounded-lg">
@@ -127,21 +151,25 @@ const Education: FC = () => {
                       <FaReact className="mr-1 text-teal-400" /> React.js
                     </span>
                     <span className="flex items-center bg-gray-700 px-3 py-1 rounded-full text-sm">
-                      <DiJavascript className="mr-1 text-yellow-400" /> JavaScript
+                      <DiJavascript className="mr-1 text-yellow-400" />{" "}
+                      JavaScript
                     </span>
                     <span className="flex items-center bg-gray-700 px-3 py-1 rounded-full text-sm">
-                      <SiTailwindcss className="mr-1 text-cyan-400" /> Tailwind CSS
+                      <SiTailwindcss className="mr-1 text-cyan-400" /> Tailwind
+                      CSS
                     </span>
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-teal-500/10 mr-4 p-2 rounded-lg">
                   <FaNodeJs className="text-teal-400 text-2xl" />
                 </div>
                 <div>
-                  <h4 className="mb-1 font-semibold text-gray-100">Backend & Tools</h4>
+                  <h4 className="mb-1 font-semibold text-gray-100">
+                    Backend & Tools
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     <span className="flex items-center bg-gray-700 px-3 py-1 rounded-full text-sm">
                       <FaNodeJs className="mr-1 text-green-500" /> Node.js
@@ -169,14 +197,16 @@ const Education: FC = () => {
             <h3 className="bg-clip-text bg-gradient-to-r from-purple-400 to-purple-300 mb-6 font-bold text-transparent text-2xl">
               What I'm Exploring
             </h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-purple-500/10 mr-4 p-2 rounded-lg">
                   <SiNextdotjs className="text-purple-400 text-2xl" />
                 </div>
                 <div>
-                  <h4 className="mb-1 font-semibold text-gray-100">Advanced Frontend</h4>
+                  <h4 className="mb-1 font-semibold text-gray-100">
+                    Advanced Frontend
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     <span className="flex items-center bg-gray-700 px-3 py-1 rounded-full text-sm">
                       <SiNextdotjs className="mr-1" /> Next.js (SSR)
@@ -190,13 +220,15 @@ const Education: FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-purple-500/10 mr-4 p-2 rounded-lg">
                   <FaNodeJs className="text-purple-400 text-2xl" />
                 </div>
                 <div>
-                  <h4 className="mb-1 font-semibold text-gray-100">Backend & Architecture</h4>
+                  <h4 className="mb-1 font-semibold text-gray-100">
+                    Backend & Architecture
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     <span className="flex items-center bg-gray-700 px-3 py-1 rounded-full text-sm">
                       🚀 Advanced Node.js

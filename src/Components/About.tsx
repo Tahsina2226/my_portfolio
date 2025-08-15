@@ -1,4 +1,5 @@
-import React, { FC, useEffect, useState } from "react";
+import type { FC } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Code, Cpu, Rocket, GraduationCap, User } from "lucide-react";
 

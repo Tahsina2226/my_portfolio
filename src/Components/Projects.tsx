@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import type { FC } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Star, Code, LayoutTemplate } from "lucide-react";
 
