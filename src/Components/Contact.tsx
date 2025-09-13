@@ -1,4 +1,5 @@
 import type { FC } from "react";
+
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -73,8 +74,7 @@ const Contact: FC = () => {
             </div>
           </motion.div>
           <p className="mx-auto mt-6 max-w-3xl text-gray-300 text-lg leading-relaxed">
-            Full-stack developer in the making with a strong foundation in data
-            structures, algorithms, and modern web tech. I enjoy building clean,
+            Full-stack developer in the making with modern web tech. I enjoy building clean,
             scalable apps with React/TypeScript on the frontend and Node/Express
             on the backend.
           </p>

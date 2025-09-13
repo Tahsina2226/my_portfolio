@@ -1,9 +1,10 @@
 import type { FC } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Star, Code, LayoutTemplate } from "lucide-react";
+import { ExternalLink, Github, Code, LayoutTemplate } from "lucide-react";
 
 interface Project {
   title: string;
+  shortName: string; // Added short name field
   description: string[];
   live: string;
   clientRepo: string;
@@ -13,7 +14,32 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Ride Management System – Role-based Ride Booking Platform",
+    shortName: "RideHub",
+    description: [
+      "A production-grade, fully responsive ride booking platform (similar to Uber/Pathao) with role-based access for Riders, Drivers, and Admins.",
+      "Implemented authentication & authorization with JWT and bcrypt.",
+      "Built dashboards with tailored features: Riders can book rides, Drivers manage requests and earnings, Admins oversee analytics.",
+      "Optimized for mobile-first responsive design with error boundaries and toast notifications.",
+    ],
+    live: "https://rider-bookings2.onrender.com",
+    clientRepo: "https://github.com/Tahsina2226/Rider_booking_frontend",
+    serverRepo: "https://github.com/Tahsina2226/Rider_booking",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "RTK Query",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind",
+      "JWT",
+    ],
+  },
+  {
     title: "FeedbackLoop – Service & Review Management Platform",
+    shortName: "LoopUp",
     description: [
       "Implemented user authentication via Firebase with Email and Google sign-in options.",
       "Developed full CRUD operations for managing services and customer reviews.",
@@ -25,7 +51,34 @@ const projects: Project[] = [
     techStack: ["React", "Firebase", "Node.js", "MongoDB", "JWT"],
   },
   {
+    title: "Student Life Toolkit – Academic & Productivity Platform",
+    shortName: "StudyKit",
+    description: [
+      "A React + TypeScript application designed to simplify student life with tools for class scheduling, budgeting, exam prep, study planning, and motivation.",
+      "Includes Class Schedule Tracker with color-coded visualizations and responsive UI.",
+      "Budget Tracker with income, expenses tracking, and visual summaries using charts.",
+      "Exam Q&A Generator to generate practice questions with adjustable difficulty.",
+      "Study Planner for breaking goals into tasks, assigning priority, deadlines, and tracking progress.",
+      "Motivational features displaying daily quotes and study tips to encourage productivity.",
+    ],
+    live: "https://student-toolkit-frontend.web.app",
+    clientRepo: "https://github.com/Tahsina2226/student_toolkit",
+    serverRepo: "https://github.com/Tahsina2226/Student_life_toolkit",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "JWT",
+      "Vite",
+      "Axios",
+      "Context API",
+    ],
+  },
+  {
     title: "Library Management System – Full-stack Application",
+    shortName: "LibraSys",
     description: [
       "Built a full-featured library management system using React, TypeScript, Redux Toolkit Query, and Tailwind CSS.",
       "Developed a scalable backend with Express.js, MongoDB, and Mongoose, implementing RESTful APIs.",
@@ -40,6 +93,7 @@ const projects: Project[] = [
   },
   {
     title: "CinemaScope – Dynamic Movie Browsing Platform",
+    shortName: "CineView",
     description: [
       "Built a dynamic platform for real-time movie browsing with an interactive and responsive UI.",
       "Integrated Firebase Authentication for secure user login and personalized access.",
@@ -60,16 +114,12 @@ const Projects: FC = () => {
       id="projects"
       className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 overflow-hidden"
     >
-      {/* Animated background elements */}
+      {/* Animated background */}
       <div className="absolute inset-0 opacity-20 overflow-hidden">
         {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            animate={{
-              x: [0, 100, 0],
-              y: [0, 50, 0],
-              rotate: [0, 180, 360],
-            }}
+            animate={{ x: [0, 100, 0], y: [0, 50, 0], rotate: [0, 180, 360] }}
             transition={{
               duration: 15 + Math.random() * 20,
               repeat: Infinity,
@@ -102,28 +152,6 @@ const Projects: FC = () => {
             A showcase of my full-stack development work with modern
             technologies
           </p>
-
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ delay: 0.5 }}
-            className="flex justify-center mt-6"
-          >
-            <div className="flex space-x-4">
-              <div className="flex items-center text-amber-400">
-                <Star className="fill-amber-400 mr-1" size={18} />
-                <span>React</span>
-              </div>
-              <div className="flex items-center text-purple-400">
-                <Star className="fill-purple-400 mr-1" size={18} />
-                <span>Node.js</span>
-              </div>
-              <div className="flex items-center text-teal-400">
-                <Star className="fill-teal-400 mr-1" size={18} />
-                <span>TypeScript</span>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* Projects Grid */}
@@ -138,7 +166,7 @@ const Projects: FC = () => {
               viewport={{ once: true }}
               className="group relative flex flex-col justify-between bg-gray-800/50 hover:bg-gray-800/70 shadow-xl hover:shadow-2xl hover:shadow-teal-400/10 backdrop-blur-sm p-6 border-amber-400 border-l-4 rounded-xl overflow-hidden transition-all duration-300"
             >
-              {/* Project glow effect */}
+              {/* Glow effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-teal-400/10 to-purple-400/10 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300"></div>
 
               <div className="z-10 relative">
@@ -148,7 +176,7 @@ const Projects: FC = () => {
                     size={24}
                   />
                   <h3 className="flex-1 bg-clip-text bg-gradient-to-r from-teal-300 to-purple-300 mb-3 font-bold text-transparent text-xl">
-                    {project.title}
+                    {project.title} ({project.shortName})
                   </h3>
                 </div>
 
@@ -167,7 +195,7 @@ const Projects: FC = () => {
                   ))}
                 </ul>
 
-                {/* Tech stack pills */}
+                {/* Tech stack */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.techStack.map((tech, i) => (
                     <span
@@ -180,6 +208,7 @@ const Projects: FC = () => {
                 </div>
               </div>
 
+              {/* Links */}
               <div className="z-10 relative flex flex-wrap gap-3 mt-4">
                 <motion.a
                   href={project.live}
